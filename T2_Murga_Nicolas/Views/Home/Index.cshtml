@@ -7,10 +7,10 @@
 
 <script>
     // Lee el parámetro de la URL (?empresa=...)
-    const urlParams = new URLSearchParams(window.location.search);
-    const seleccion = urlParams.get('empresa') || 'alicorp';
+    var urlParams = new URLSearchParams(window.location.search);
+    var seleccion = urlParams.get('empresa') || 'alicorp';
 
-    const distribuidores = {
+    var datos = {
         alicorp: {
             titulo: "Alicorp S.A.A. – Líder de Distribución Multicanal en el Perú",
             color: "#0d6efd",
@@ -28,23 +28,23 @@
         amazon: {
             titulo: "Amazon Logistics – Distribución Comercial y Última Milla",
             color: "#198754",
-            desc: "Amazon Logistics representa la evolución de la distribución comercial mediante el uso intensivo de datos, inteligencia artificial y automatización robótica. Su modelo de distribución de última milla prioriza la velocidad de entrega extrema, gestionando almacenes inteligentes coordinados mediante algoritmos predictivos globales.",
+            desc: "Amazon Logistics represents la evolución de la distribución comercial mediante el uso intensivo de datos, inteligencia artificial y automatización robótica. Su modelo de distribución de última milla prioriza la velocidad de entrega extrema, gestionando almacenes inteligentes coordinados mediante algoritmos predictivos globales.",
             img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT5hxrzPvR6G5kJzU4ialzaaHKeCkzsVAjjQ&s",
             video: "https://www.youtube.com/embed/5pTvd5BCdTE"
         }
     };
 
-    const actual = distribuidores[seleccion] || distribuidores.alicorp;
+    var actual = datos[seleccion] || datos.alicorp;
 
-    // Pinta la información estructural en la pantalla
-    document.getElementById('vista-distribuidor').innerHTML = `
-        <h2 style="color: \${actual.color}; font-weight: bold; margin-bottom: 15px;">\${actual.titulo}</h2>
-        <p style="font-size: 16px; line-height: 1.6; text-align: justify; max-width: 900px;">\${actual.desc}</p>
-        <br />
-        <img src="\${actual.img}" alt="Distribución" style="border-radius: 8px; border: 1px solid #ccc; max-width: 100%; max-height: 350px;" />
-        <br /><br />
-        <h4 style="color: #333;">Video Institucional:</h4>
-        <br />
-        <iframe width="640" height="360" src="\${actual.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></iframe>
-    `;
+    // Concatenación clásica de texto para evitar que el motor de Razor se rompa
+    var htmlContent = '<h2 style="color: ' + actual.color + '; font-weight: bold; margin-bottom: 15px;">' + actual.titulo + '</h2>' +
+                      '<p style="font-size: 16px; line-height: 1.6; text-align: justify; max-width: 900px;">' + actual.desc + '</p>' +
+                      '<br />' +
+                      '<img src="' + actual.img + '" alt="Distribución" style="border-radius: 8px; border: 1px solid #ccc; max-width: 100%; max-height: 350px;" />' +
+                      '<br /><br />' +
+                      '<h4 style="color: #333;">Video Institucional:</h4>' +
+                      '<br />' +
+                      '<iframe width="640" height="360" src="' + actual.video + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></iframe>';
+
+    document.getElementById('vista-distribuidor').innerHTML = htmlContent;
 </script>
