@@ -2,72 +2,49 @@
     ViewData["Title"] = "Análisis de Distribuidores";
 }
 
-<div class="container mt-4" style="font-family: Arial, sans-serif;">
-    <h2 class="mb-4 text-center" style="color: #333; font-weight: bold;">Análisis de Distribuidores Líderes</h2>
-    
-    <!-- Pestañas de Navegación de Bootstrap -->
-    <ul class="nav nav-tabs" id="distribuidoresTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active fw-bold" id="alicorp-tab" data-bs-toggle="tab" data-bs-target="#alicorp" type="button" role="tab" aria-controls="alicorp" aria-selected="true" style="color: #0d6efd;">1. ALICORP (PERÚ)</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link fw-bold" id="dhl-tab" data-bs-toggle="tab" data-bs-target="#dhl" type="button" role="tab" aria-controls="dhl" aria-selected="false" style="color: #ffcc00;">2. DHL SUPPLY CHAIN</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link fw-bold" id="amazon-tab" data-bs-toggle="tab" data-bs-target="#amazon" type="button" role="tab" aria-controls="amazon" aria-selected="false" style="color: #198754;">3. AMAZON LOGISTICS</button>
-        </li>
-    </ul>
-
-    <!-- Contenido de las Pestañas -->
-    <div class="tab-content border p-4 bg-light rounded-bottom" id="distribuidoresTabContent">
-        
-        <!-- 1. ALICORP -->
-        <div class="tab-pane fade show active" id="alicorp" role="tabpanel" aria-labelledby="alicorp-tab">
-            <h3 style="color: #0d6efd; font-weight: bold;">Alicorp S.A.A. – Líder de Distribución Multicanal en el Perú</h3>
-            <p style="font-size: 15px; line-height: 1.6; text-align: justify;">
-                Alicorp es la empresa peruana de consumo masivo más grande a nivel nacional. Su estrategia destaca por un modelo integral de cadena de suministro que abastece de manera eficiente a múltiples canales: el canal tradicional (bodegas y mercados de abastos), el canal moderno (supermercados y tiendas de conveniencia) y el sector industrial. A través de macrocentros de distribución automatizados en Lima y sedes regionales, optimizan el picking y la distribución de última milla para garantizar el abastecimiento comercial.
-            </p>
-            <div class="text-center my-3">
-                <img src="https://www.infobae.com/resizer/v2/OPS6VWYMMFHWTIDN263VISY4BI.jpeg?auth=9e4828b41b8bafb871b2a2805966b9a9712e9fab85ca2b4d60e9e2c0ec9b9c72&smart=true&width=1200&height=900&quality=85" alt="Distribución Alicorp" class="img-fluid rounded border" style="max-height: 350px;" />
-            </div>
-            <br />
-            <h5 class="fw-bold text-secondary">Video Institucional: Operación y Logística de Distribución Nacional</h5>
-            <div class="ratio ratio-16x9 mt-2" style="max-width: 640px;">
-                <iframe src="https://www.youtube.com/embed/S_I8_BIdZ_E" title="Alicorp Logística" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
-            </div>
-        </div>
-
-        <!-- 2. DHL -->
-        <div class="tab-pane fade" id="dhl" role="tabpanel" aria-labelledby="dhl-tab">
-            <h3 style="color: #ffcc00; font-weight: bold; background-color: #333; padding: 5px 10px; border-radius: 4px;">DHL Supply Chain – Operador Logístico Global</h3>
-            <p style="font-size: 15px; line-height: 1.6; text-align: justify;">
-                DHL Supply Chain es el mayor distribuidor y operador logístico del mundo. Se especializa en diseñar e implementar soluciones de distribución personalizadas para sectores clave como el automotriz, tecnológico, farmacéutico y retail, utilizando almacenes inteligentes interconectados globalmente para optimizar los tiempos de entrega internacionales.
-            </p>
-            <div class="text-center my-3">
-                <img src="https://peruretail.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/WhatsApp-Image-2023-12-13-at-4.08.10-PM-2.jpeg" alt="Distribución DHL" class="img-fluid rounded border" style="max-height: 350px;" />
-            </div>
-            <br />
-            <h5 class="fw-bold text-secondary">Video Institucional: Innovación Tecnológica en Centros Logísticos</h5>
-            <div class="ratio ratio-16x9 mt-2" style="max-width: 640px;">
-                <iframe src="https://www.youtube.com/embed/VZXCKBHAQbQ" title="DHL Logística" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
-            </div>
-        </div>
-
-        <!-- 3. AMAZON -->
-        <div class="tab-pane fade" id="amazon" role="tabpanel" aria-labelledby="amazon-tab">
-            <h3 style="color: #198754; font-weight: bold;">Amazon Logistics – Distribución Comercial y Última Milla</h3>
-            <p style="font-size: 15px; line-height: 1.6; text-align: justify;">
-                Amazon Logistics representa la evolución de la distribución comercial mediante el uso intensivo de datos, inteligencia artificial y automatización robótica. Su modelo de distribución de última milla prioriza la velocidad de entrega extrema, gestionando almacenes inteligentes coordinados mediante algoritmos predictivos globales.
-            </p>
-            <div class="text-center my-3">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT5hxrzPvR6G5kJzU4ialzaaHKeCkzsVAjjQ&s" alt="Distribución Amazon" class="img-fluid rounded border" style="max-height: 350px;" />
-            </div>
-            <br />
-            <h5 class="fw-bold text-secondary">Video Institucional: Automatización de Centros de Despacho Robóticos</h5>
-            <div class="ratio ratio-16x9 mt-2" style="max-width: 640px;">
-                <iframe src="https://www.youtube.com/embed/5pTvd5BCdTE" title="Amazon Logística" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>
-            </div>
-        </div>
-
+<div id="vista-distribuidor" style="padding: 20px; font-family: Arial, sans-serif;">
     </div>
-</div>
+
+<script>
+    // Lee el parámetro de la URL (?empresa=...)
+    const urlParams = new URLSearchParams(window.location.search);
+    const seleccion = urlParams.get('empresa') || 'alicorp';
+
+    const distribuidores = {
+        alicorp: {
+            titulo: "Alicorp S.A.A. – Líder de Distribución Multicanal en el Perú",
+            color: "#0d6efd",
+            desc: "Alicorp es la empresa peruana de consumo masivo más grande a nivel nacional. Su estrategia destaca por un modelo integral de cadena de suministro que abastece de manera eficiente a múltiples canales: el canal tradicional (bodegas y mercados de abastos), el canal moderno (supermercados y tiendas de conveniencia) y el sector industrial. A través de macrocentros de distribución automatizados en Lima y sedes regionales, optimizan el picking y la distribución de última milla para garantizar el abastecimiento comercial.",
+            img: "https://www.infobae.com/resizer/v2/OPS6VWYMMFHWTIDN263VISY4BI.jpeg?auth=9e4828b41b8bafb871b2a2805966b9a9712e9fab85ca2b4d60e9e2c0ec9b9c72&smart=true&width=1200&height=900&quality=85",
+            video: "https://www.youtube.com/embed/S_I8_BIdZ_E"
+        },
+        dhl: {
+            titulo: "DHL Supply Chain – Operador Logístico Global",
+            color: "#ffcc00",
+            desc: "DHL Supply Chain es el mayor distribuidor y operador logístico del mundo. Se especializa en diseñar e implementar soluciones de distribución personalizadas para sectores clave como el automotriz, tecnológico, farmacéutico y retail, utilizando almacenes inteligentes interconectados globalmente para optimizar los tiempos de entrega.",
+            img: "https://peruretail.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/WhatsApp-Image-2023-12-13-at-4.08.10-PM-2.jpeg",
+            video: "https://www.youtube.com/embed/VZXCKBHAQbQ"
+        },
+        amazon: {
+            titulo: "Amazon Logistics – Distribución Comercial y Última Milla",
+            color: "#198754",
+            desc: "Amazon Logistics representa la evolución de la distribución comercial mediante el uso intensivo de datos, inteligencia artificial y automatización robótica. Su modelo de distribución de última milla prioriza la velocidad de entrega extrema, gestionando almacenes inteligentes coordinados mediante algoritmos predictivos globales.",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT5hxrzPvR6G5kJzU4ialzaaHKeCkzsVAjjQ&s",
+            video: "https://www.youtube.com/embed/5pTvd5BCdTE"
+        }
+    };
+
+    const actual = distribuidores[seleccion] || distribuidores.alicorp;
+
+    // Pinta la información estructural en la pantalla
+    document.getElementById('vista-distribuidor').innerHTML = `
+        <h2 style="color: \${actual.color}; font-weight: bold; margin-bottom: 15px;">\${actual.titulo}</h2>
+        <p style="font-size: 16px; line-height: 1.6; text-align: justify; max-width: 900px;">\${actual.desc}</p>
+        <br />
+        <img src="\${actual.img}" alt="Distribución" style="border-radius: 8px; border: 1px solid #ccc; max-width: 100%; max-height: 350px;" />
+        <br /><br />
+        <h4 style="color: #333;">Video Institucional:</h4>
+        <br />
+        <iframe width="640" height="360" src="\${actual.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></iframe>
+    `;
+</script>
